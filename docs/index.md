@@ -3,23 +3,25 @@
 layout: home
 
 hero:
-  name: "waitlist-doc"
-  text: "A waitlist doc"
-  tagline: My great project tagline
-  actions:
-    - theme: brand
-      text: Markdown Examples
-      link: /markdown-examples
-    - theme: alt
-      text: API Examples
-      link: /api-examples
+    name: Waitlist
+    text: 候位系統說明文件
+    tagline: 讓候位安排變成簡單的事，只需要幾分鐘
+    actions:
+        - theme: brand
+          text: Guideline
+          link: /guideline
+        - theme: alt
+          text: Document
+          link: /document/specification
 
 features:
-  - title: Feature A
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature B
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature C
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+    - icon: 🛠️
+      title: 簡單直覺
+      details: 更簡潔的操作流程，省去來往確認的時間。
+    - icon: 🛠️
+      title: 輕盈
+      details: 網頁，免安裝
+    - icon: 🛠️
+      title: Feature C
+      details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
 ---
-
