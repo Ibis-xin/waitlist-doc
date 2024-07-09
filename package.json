@@ -2,7 +2,8 @@
   "scripts": {
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
-    "docs:preview": "vitepress preview docs"
+    "docs:preview": "vitepress preview docs",
+    "deploy": "npm run build && node ./deploy/ghpages.ts"
   },
   "devDependencies": {
     "gh-pages": "^6.1.1",
