@@ -13,6 +13,7 @@ outline: deep
 ```json
 {
     "_id": ObjectId("507f1f77bcf86cd799439011"),
+    "status": 0, // 訂單狀態
     "registerNumber": 0, // 登記序號
     "registerTime": Date("2016-05-18T16:00:00Z");, // 登記時間
     "audlt": 0, // 成人用餐數
@@ -29,20 +30,21 @@ outline: deep
 
 ### 欄位說明
 
-| name           | type       | uniqued                       | readonly | description                                                          |
-| -------------- | ---------- | ----------------------------- | -------- | -------------------------------------------------------------------- |
-| \_id           | ObjectId   | ✅                            | ✅       | 由 mongoDB 自動生成                                                  |
-| registerNumber | int        | registerNumber & registerTime | ✅       | 登記序號                                                             |
-| registerTime   | Date       |                               | ✅       | 登記時間                                                             |
-| audlt          | int        |                               |          | 成人用餐數                                                           |
-| child          | int        |                               |          | 兒童用餐數                                                           |
-| highchair      | int        |                               |          | 兒童椅數                                                             |
-| checkinTime    | Date       |                               | ✅       | 入座時間，如抽取號碼牌未入座則為 Default datetime                    |
-| orderNumber    | int        | orderNumber & orderTime       | ✅       | 點餐序號，如抽取號碼牌未入座或入座未點餐則為 -1                      |
-| orderTime      | Date       |                               | ✅       | 點餐時間，如抽取號碼牌未入座或入座未點餐則為 Default datetime        |
-| orderDetail    | ObjectId[] |                               |          | 點餐明細，需對照菜單資料庫，如抽取號碼牌未入座或入座未點餐則為空陣列 |
-| amount         | number     |                               | ✅       | 金額，如抽取號碼牌未入座或入座未點餐則為 0                           |
-| checkoutTime   | Date       |                               | ✅       | 結帳時間，如抽取號碼牌未入座則為 Default datetime                    |
+| name           | type       | uniqued                       | readonly | description                                                                    |
+| -------------- | ---------- | ----------------------------- | -------- | ------------------------------------------------------------------------------ |
+| \_id           | ObjectId   | ✅                            | ✅       | 由 mongoDB 自動生成                                                            |
+| status         | int (enum) |                               | ✅       | 訂單狀態，0: 候位中、1: 取消候位、2: 已入座、3: 取消用餐、4: 用餐中、5: 已結帳 |
+| registerNumber | int        | registerNumber & registerTime | ✅       | 登記序號                                                                       |
+| registerTime   | Date       |                               | ✅       | 登記時間                                                                       |
+| audlt          | int        |                               |          | 成人用餐數                                                                     |
+| child          | int        |                               |          | 兒童用餐數                                                                     |
+| highchair      | int        |                               |          | 兒童椅數                                                                       |
+| checkinTime    | Date       |                               | ✅       | 入座時間，如抽取號碼牌未入座則為 Default datetime                              |
+| orderNumber    | int        | orderNumber & orderTime       | ✅       | 點餐序號，如抽取號碼牌未入座或入座未點餐則為 -1                                |
+| orderTime      | Date       |                               | ✅       | 點餐時間，如抽取號碼牌未入座或入座未點餐則為 Default datetime                  |
+| orderDetail    | ObjectId[] |                               |          | 點餐明細，需對照菜單資料庫，如抽取號碼牌未入座或入座未點餐則為空陣列           |
+| amount         | number     |                               | ✅       | 金額，如抽取號碼牌未入座或入座未點餐則為 0                                     |
+| checkoutTime   | Date       |                               | ✅       | 結帳時間，如抽取號碼牌未入座則為 Default datetime                              |
 
 ## 菜單
 
