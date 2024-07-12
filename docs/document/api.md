@@ -6,8 +6,8 @@ outline: deep
 
 ## 送出候位資訊
 
-| POST | http://localhost:7260/ |
-| ---- | ---------------------- |
+| POST | `http://localhost:7260/` |
+| ---- | ------------------------ |
 
 ### Header Params
 
@@ -34,8 +34,8 @@ outline: deep
 
 ## 查詢候位登記
 
-| GET | http://localhost:7260/ |
-| --- | ---------------------- |
+| GET | `http://localhost:7260/` |
+| --- | ------------------------ |
 
 ### Header Params
 
@@ -55,8 +55,8 @@ outline: deep
 
 ## 取消候位登記
 
-| PUT | http://localhost:7260/ |
-| --- | ---------------------- |
+| PUT | `http://localhost:7260/` |
+| --- | ------------------------ |
 
 ### Header Params
 
