@@ -114,7 +114,6 @@ socket.onerror = function (error) {
 ```
 
 ### Server-Side Response Example
-
 服務器推送的數據格式如下：
 
 ```json
